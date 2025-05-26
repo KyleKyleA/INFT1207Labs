@@ -9,7 +9,6 @@
 
 #region IMPORTS
 import random
-import string
 #endregion IMPORTS
 
 #region GLOBAL VARIABLES
@@ -31,10 +30,16 @@ UPPER_CASE_LETTERS = ("A", "B", "C",  "D",  "E",  "F",  "G",  "H",  "I",  "J",
 LOWER_CASE_LETTERS = ("a",  "b",  "c",  "d",  "e",  "f",  "g",  "h", "i", "j",
                       "k", "l","m", "n", "o",  "p",   "q",   "s",   "t",   "u",
                       "v",   "w",   "x",   "y",   "z")
+
+STRING_DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+STRING_SPECIAL_CHARACTERS = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+",
+                             ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@",
+                             "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]
 #endregion
 
 #region FUNCTIONS
-# modifiers
+#region modifiers
 def set_length (prompt: str, minimum: int):
     """Gets, verifies, and returns user's valid length input"""
     while True:
@@ -107,25 +112,48 @@ def set_special_characters (prompt: str, minimum: int, maximum: int):
         except Exception as e:
             print(e)
 
-# def generate_password(int length, int letters, int digits, int special_characters)
+def generate_password(length: int, letters: int, digits: int, special_characters: int):
+    """Generates a password based on the given parameters"""
+    # verifies that parameters don't conflict
+    if letters + digits + special_characters != length:
+        raise ValueError("Sum of letters, digits, and special characters must equal total password length!")
 
-# wrapper
+    # randomly generates a set of letters, digits, and special characters
+    chosen_letters = random.choices((UPPER_CASE_LETTERS + LOWER_CASE_LETTERS), k=letters)
+    chosen_digits = random.choices(STRING_DIGITS, k=digits)
+    chosen_special = random.choices(STRING_SPECIAL_CHARACTERS, k=special_characters)
+
+    # combines the randomly generated sets and shuffles them
+    password_chars = chosen_letters + chosen_digits + chosen_special
+    random.shuffle(password_chars)
+
+    return ''.join(password_chars)
+#endregion modifiers
+
+#region wrapper
 def main():
     # greet user and explain program
     print("Hello!")
     print("This program will generate a random password based on your specifications.\n")
 
-    # call functions to prompt user's inputs
-    password_length = set_length(f"Enter the length of the password (>=: {MIN_LENGTH}): ", MIN_LENGTH)
-    number_of_letters = set_letters(f"Enter the number of letters in the password (b/w {MIN_LETTERS} and {MAX_LETTERS}): ",
-                                    MIN_LETTERS, MAX_LETTERS)
-    number_of_digits = set_digits(f"Enter the number of digits in the password (b/w {MIN_DIGITS} and {MAX_DIGITS}): ",
-                                    MIN_DIGITS, MAX_DIGITS)
-    number_of_special_characters = set_special_characters(f"Enter the number of special characters in the password (b/w {MIN_SPECIAL_CHARACTERS} and {MAX_SPECIAL_CHARACTERS}): ",
-                                    MIN_SPECIAL_CHARACTERS, MAX_SPECIAL_CHARACTERS)
+    while True:
+        # call functions to prompt user's inputs
+        password_length = set_length(f"Enter the length of the password (>=: {MIN_LENGTH}): ", MIN_LENGTH)
+        number_of_letters = set_letters(f"Enter the number of letters in the password (b/w {MIN_LETTERS} and {MAX_LETTERS}): ",
+                                        MIN_LETTERS, MAX_LETTERS)
+        number_of_digits = set_digits(f"Enter the number of digits in the password (b/w {MIN_DIGITS} and {MAX_DIGITS}): ",
+                                        MIN_DIGITS, MAX_DIGITS)
+        number_of_special_characters = set_special_characters(f"Enter the number of special characters in the password (b/w {MIN_SPECIAL_CHARACTERS} and {MAX_SPECIAL_CHARACTERS}): ",
+                                        MIN_SPECIAL_CHARACTERS, MAX_SPECIAL_CHARACTERS)
 
-    # call function to generate and output password
-
+        # call function to generate and output password
+        try:
+            password = generate_password(password_length, number_of_letters, number_of_digits, number_of_special_characters)
+            print(f"\nYour desired password is: {password}")
+            break
+        except ValueError as e:
+            print(f"ERROR: {e}\n")
+#endregion wrapper
 #endregion FUNCTIONS
 
 #region MAIN PROGRAM
