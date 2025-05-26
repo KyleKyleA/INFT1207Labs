@@ -119,12 +119,12 @@ def generate_password(length: int, letters: int, digits: int, special_characters
         raise ValueError("Sum of letters, digits, and special characters must equal total password length!")
 
     # randomly generates a set of letters, digits, and special characters
-    chosen_letters = random.choices((UPPER_CASE_LETTERS + LOWER_CASE_LETTERS), k=letters)
-    chosen_digits = random.choices(STRING_DIGITS, k=digits)
-    chosen_special = random.choices(STRING_SPECIAL_CHARACTERS, k=special_characters)
+    random_letters_set = random.choices((UPPER_CASE_LETTERS + LOWER_CASE_LETTERS), k=letters)
+    random_digits_set = random.choices(STRING_DIGITS, k=digits)
+    random_special_characters_set = random.choices(STRING_SPECIAL_CHARACTERS, k=special_characters)
 
     # combines the randomly generated sets and shuffles them
-    password_chars = chosen_letters + chosen_digits + chosen_special
+    password_chars = random_letters_set + random_digits_set + random_special_characters_set
     random.shuffle(password_chars)
 
     return ''.join(password_chars)
