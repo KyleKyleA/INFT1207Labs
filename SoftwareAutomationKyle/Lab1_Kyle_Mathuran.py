@@ -117,25 +117,26 @@ def generate_password(length: int, letters: int ,  digits: int, special_characte
 
 
     #randomly generates a set of letters, digits, and special characters
-    chosen_letters = random.choices((UPPER_CASE_LETTERS + LOWER_CASE_LETTERS), k=letters)
-    chosen_digits = random.choices(STRING_DIGITS, k=digits)
-    chosen_special = random.choices(STRING_SPECIAL_CHARACTERS, k=special_characters)
+    random_letters_set = random.choices((UPPER_CASE_LETTERS + LOWER_CASE_LETTERS), k=letters)
+    random_digits_set = random.choices(STRING_DIGITS, k=digits)
+    random_special_characters_set = random.choices(STRING_SPECIAL_CHARACTERS, k=special_characters)
 
     #Combines the randomly generated sets and shuffles them
-    password_chars = chosen_letters + chosen_digits + chosen_letters
+    password_chars = random_letters_set + random_digits_set + random_special_characters_set
     random.shuffle(password_chars)
     return ''.join(password_chars)
 #endregion modifiers
 
 
 #region wrapper
-def main(password_length=None):
+def main():
     # greet user and explain program
     print("Hello!")
     print("This program will generate a random password based on your specifications.\n")
 
+while True:
     # call functions to prompt user's inputs
-    password_lengths = set_length(f"Enter the length of the password (>=: {MIN_LENGTH}): ", MIN_LENGTH)
+    password_length = set_length(f"Enter the length of the password (>=: {MIN_LENGTH}): ", MIN_LENGTH)
     number_of_letters = set_letters(f"Enter the number of letters in the password (b/w {MIN_LETTERS} and {MAX_LETTERS}): ",
                                     MIN_LETTERS, MAX_LETTERS)
     number_of_digits = set_digits(f"Enter the number of digits in the password (b/w {MIN_DIGITS} and {MAX_DIGITS}): ",
@@ -153,7 +154,6 @@ def main(password_length=None):
 
 
 #region MAIN PROGRAM
-if __name__ == "__main__":
     main()
     exit()
 #EndRegion MAIN PROGRAM
