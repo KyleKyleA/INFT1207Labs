@@ -11,7 +11,7 @@
 import random
 #endregion IMPORTS
 
-#region GLOBAL VARIABLES
+#region CONSTANTS
 MIN_LENGTH = 8
 
 MIN_LETTERS = 0
