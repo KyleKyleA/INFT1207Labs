@@ -18,8 +18,8 @@ def retrieve_book():
             print(f"Title:  {rows[0]}, Author: {rows[1]}, Year{rows[2]}")
         if not found:
             print("Currently your reading list is empty.")
-        else:
-    print("\nReading list is not found or listed. try adding a book first.")
+    except ValueError:
+        print("\nReading list is not found or listed. try adding a book first.")
 
 
 # search book (Kyle)
@@ -35,8 +35,8 @@ def search_book(search_term):
                     break
             if not found:
                 print("Book not found.")
-            else:
-                print("No reading list is founded. ")
+    except ValueError:
+        print("No reading list is founded. ")
 
 # menu (Mathuran)
 # main function
