@@ -131,7 +131,7 @@ def validate_int_range(prompt: str, minimum: int, maximum: int):
     while True:
         try:
             # prompt user for input
-            int_input = int(input(f"Pick option ({minimum}-{maximum}): "))
+            int_input = int(input(prompt))
 
             # checks if number is within specified range
             if int_input < minimum or int_input > maximum:
@@ -156,7 +156,7 @@ def menu():
     while True:
         # greet user and prompt action
         print(MENU)
-        menu_input = validate_int_range("Pick option: ", 1, 4)
+        menu_input = validate_int_range("Pick option (1-4): ", 1, 4)
 
         print("")
 
