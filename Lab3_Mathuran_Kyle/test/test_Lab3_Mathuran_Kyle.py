@@ -41,6 +41,33 @@ class TestArea(unittest.TestCase):
         self.assertEqual(circle_area(1), pi)
         self.assertEqual(circle_area(0), 0)
 
+    def test_ellipse_area_TypeError(self):
+        self.assertRaises(TypeError, ellipse_area, 2+9j, 1)
+        self.assertRaises(TypeError, ellipse_area, 1, 2+9j)
+        self.assertRaises(TypeError, ellipse_area, 2+9j, 3+7j)
+
+        self.assertRaises(TypeError, ellipse_area, "Hello World", 5)
+        self.assertRaises(TypeError, ellipse_area, 5, "Hello World")
+        self.assertRaises(TypeError, ellipse_area, "Hello", "World")
+
+        self.assertRaises(TypeError, ellipse_area, True, 8)
+        self.assertRaises(TypeError, ellipse_area, 9, False)
+        self.assertRaises(TypeError, ellipse_area, True, False)
+
+    def test_ellipse_area_ValueError(self):
+        self.assertRaises(ValueError, ellipse_area, -2, 9)
+        self.assertRaises(ValueError, ellipse_area, 9, -2)
+        self.assertRaises(ValueError, ellipse_area, -2, -2)
+
+        self.assertRaises(ValueError, ellipse_area, -2.2, 9.5)
+        self.assertRaises(ValueError, ellipse_area, 9.5, -2.2)
+        self.assertRaises(ValueError, ellipse_area, -2.2, -9.5)
+
+    def test_ellipse_area_ValidInputs(self):
+        self.assertEqual(ellipse_area(3, 4), pi*3*4)
+        self.assertEqual(ellipse_area(1, 1), pi)
+        self.assertEqual(ellipse_area(0, 0), 0)
+
 if __name__ == "__main__":
     unittest.main()
     exit()
