@@ -7,7 +7,7 @@ Description: Set of test cases for 'calculate_area' methods along with fixtures
 
 #region IMPORTS
 import unittest
-from app.calculate_area import *
+from app.Lab3_Mathuran_Kyle import *
 
 from math import pi
 #endregion IMPORTS
