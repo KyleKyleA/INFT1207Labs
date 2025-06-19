@@ -36,10 +36,21 @@ def test_suite(shape: str):
         suite.addTest(TestArea('test_circle_area_ValueError'))
         suite.addTest(TestArea('test_circle_area_ValidInputs'))
 
+    #Trape
+    elif shape == 2:
+        suite.addTest(TestArea('test_trapezium__area_TypeError'))
+        suite.addTest(TestArea('test_trapezium_area_ValueError'))
+        suite.addTest(TestArea('test_trapezium_area_ValidInput'))
+
     elif shape == 3:
         suite.addTest(TestArea('test_ellipse_area_TypeError'))
         suite.addTest(TestArea('test_ellipse_area_ValueError'))
         suite.addTest(TestArea('test_ellipse_area_ValidInputs'))
+
+    elif shape == 4:
+        suite.addTest(TestArea('test_rhombus_area_TypeError'))
+        suite.addTest(TestArea('test_trapezium_area_ValueError'))
+        suite.addTest(TestArea('test_rhombus_area_ValidInputs'))
 
     print(runner.run(suite))
 #endregion unittest
