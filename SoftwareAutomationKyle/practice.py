@@ -155,3 +155,37 @@
 # else:
 #     print("fail")
 
+
+# set1 = {10,20,30,40}
+# set2 = {50, 20, "10", 60}
+# set3 = set1.union(set2)
+# print(set3)
+
+# sampleSet = {"Yellow", "Orange", "Black"}
+# sampleSet.add("Blue")
+# sampleSet.add("Orange")
+# print(sampleSet)
+
+# sampleDict = dict([
+# ('first', 1),
+# ('second', 2),
+# ('third', 3)
+# ])
+# print(sampleDict)
+
+# import unittest
+#
+#
+# class TestSum(unittest.TestCase):
+#
+#     def test_sum(self):
+#         self.assertEqual(sum([1, 2, 3]), 6, "Should be 6")
+#
+#     def test_sum_tuple(self):
+#         self.assertEqual(sum((1, 2, 2)), 6, "Should be 6")
+#
+# if __name__ == '__main__':
+#     unittest.main()
+
+aTuple = (10, 20, 30, 40, 50, 60, 70, 80)
+print(aTuple[2:5], aTuple[:4], aTuple[3:])

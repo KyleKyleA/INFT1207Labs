@@ -1,0 +1,178 @@
+Index: Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\r\nName: Mathuran Chandramohan, Kyle Angeles\r\nCourse: INFT 1207\r\nDate: June 19th, 2025\r\nDescription: Set of functions that calculate the areas of a circle, trapezium, ellipse, and rhombus\r\n\"\"\"\r\n\r\n#region IMPORTS\r\nfrom math import pi\r\n#endregion IMPORTS\r\n\r\n#region FUNCTIONS\r\ndef circle_area(radius):\r\n    \"\"\"Calculates area of circle given radius\"\"\"\r\n    # checks for numeric input\r\n    if type(radius) not in [int, float]:\r\n        raise TypeError(\"The radius must be int or float\")\r\n\r\n    # checks if numeric input is greater than 0\r\n    if radius < 0:\r\n        raise ValueError(\"Radius must be positive value\")\r\n\r\n    return pi*(radius**2)\r\n\r\ndef ellipse_area(major_axis, minor_axis):\r\n    \"\"\"Calculates area of eclipse given major and minor axes\"\"\"\r\n    # checks for numeric inputs\r\n    if type(major_axis) not in [int, float]:\r\n        raise TypeError(\"The major axis must be int or float\")\r\n    if type(minor_axis) not in [int, float]:\r\n        raise TypeError(\"The minor axis must be int or float\")\r\n\r\n    # checks if numeric inputs is greater than 0\r\n    if major_axis < 0:\r\n        raise ValueError(\"Major axis must be positive\")\r\n    if minor_axis < 0:\r\n        raise ValueError(\"Minor axis must be positive\")\r\n\r\n    return pi*major_axis*minor_axis\r\n#endregion FUNCTIONS
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py b/Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py
+--- a/Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py	(revision f4716f71aea0a330c050fbab2a63043d5e3b1275)
++++ b/Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py	(date 1750362982922)
+@@ -37,4 +37,36 @@
+         raise ValueError("Minor axis must be positive")
+ 
+     return pi*major_axis*minor_axis
++
++def rhombus_area(first_diagonal, second_diagonal):
++    """Calculates the area of the rhombus given two diagonal input """
++    # checks for numeric input
++    if type (first_diagonal) not in [int, float]:
++        raise TypeError("The first diagonal must be int or float")
++    if second_diagonal not in [int, float]:
++        raise TypeError("The second diagonal must be int or float")
++
++    #checks if numeric input is whether int or float
++    if first_diagonal <= 0 or second_diagonal >= 0:
++        raise ValueError ("Both diagonals must be positive")
++
++    return (first_diagonal * second_diagonal) / 2
++
++def trapezium(base1, base2, height ):
++    """Calculates area of the trapezium given two numbers"""
++    #Checks for numeric input
++    if type (base1) not in [int, float]:
++        raise TypeError("First number must be int or float")
++    if type (base2) not in [int, float]:
++        raise TypeError("Second number must be int or float")
++    if type(height) not in [int, float]:
++        raise TypeError("Height must be must be int of float")
++
++    #checks input for positive values
++    if base1 <= 0 or base2 <= 0 or height <=0:
++        raise ValueError("All values must be positive")
++
++    #Calculates trapezium and returns area
++    return 0.5 * (base1 + base2) * height
++
+ #endregion FUNCTIONS
+\ No newline at end of file
+Index: SoftwareAutomationKyle/practice.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># def find_largest(x, y, z):\r\n#     return max(x, y, z)\r\n#\r\n# test_cases = [\r\n#     (1, 150, 150),\r\n#     (2, 150, 150),\r\n#     (150, 150, 150),\r\n#     (299, 150, 150),\r\n#     (300, 150, 150),\r\n#     (150, 1, 150),\r\n#     (150, 2, 150),\r\n#     (150, 299, 150),\r\n#     (150, 300, 150),\r\n#     (150, 150, 1),\r\n#     (150, 150, 2),\r\n#     (150, 150, 299 ),\r\n#     (150, 150, 300)\r\n# ]\r\n#\r\n# print(\"Test Case | x y z | Expected output | Actual Output | MAtch\")\r\n# print(\"-----------------------------------------------------------\")\r\n#\r\n# for i, (x, y, z) in enumerate (test_cases, start=1):\r\n#     excepted = max (x, y, z)\r\n#     actual = find_largest(x, y, z)\r\n#     match = \"✅\" if actual == excepted else \"X\"\r\n#     print(f\"{i<9} | {x:3} {y:3} {z:3} | {excepted:8} | {actual:6} | {match}\")\r\n# from numpy.ma.extras import average\r\n# from scipy.cluster.hierarchy import average\r\n\r\n\r\n# def final_grade(mark1, mark2, mark3):\r\n#\r\n#     if 75 <= average <= 100:\r\n#         return \"First Division with distinction\"\r\n#     elif 60 <= average < 75:\r\n#         return \"First division\"\r\n#     elif  50 <= average < 60:\r\n#         return \"Second division\"\r\n#     elif 40 <= average < 50:\r\n#         return \"Third deivision\"\r\n#     else:\r\n#         return \"Fail\"\r\n#\r\n# grade_case = [\r\n#     (0,0,0),\r\n#     (39,39,39),\r\n#     (40, 40, 40),\r\n#     (49,49,49),\r\n#     (50,50,50),\r\n#     (59, 59, 59),\r\n#     (60, 60, 60),\r\n#     (74, 74, 74),\r\n#     (75,75,75),\r\n#     (100,100,100),\r\n#     (39, 40, 40),\r\n#     (49, 49, 50),\r\n#     (74, 74, 75)\r\n# ]\r\n#\r\n# print (\"Test Case | Final Marks                           | Average | Expected grade\")\r\n# print(\"-----------------------------------------------------------------------------\")\r\n#\r\n# for i, (m1, m2, m3) in enumerate (grade_case, start=1):\r\n#     average = (m1 + m2 + m3 ) / 3\r\n#     grade = final_grade(m1, m2, m3)\r\n#     print(f\"{i:9} | {m1:3}{m2:3}{m3:3} | {average:7.2f} | {grade}\")\r\n\r\n\r\n# def is_valid_triangle(a, b, c):\r\n#     return (a + b > c) and (a + c > b) and (b + c > a)\r\n#\r\n#\r\n# def classify_triangle(a, b, c):\r\n#     if not is_valid_triangle(a, b, c):\r\n#         return \"Invalid Triangle\"\r\n#\r\n#\r\n#     sides = sorted([a, b, c])\r\n#     x, y, z = sides  # x is a y is b and z is z\r\n#     x2, y2, z2 = x ** 2, y ** 2, z ** 2\r\n#\r\n#     if z2 == x2 + y2:\r\n#         return \"Right\r\n#         angled triangle\"\r\n#     elif z2 > x2 + y2:\r\n#         return \"Obtuse Triangle\"\r\n#     else:\r\n#         return \"Acute triangle\"\r\n#\r\n#\r\n# try:\r\n#\r\n#     a = int(input(\"Enter side a (1-100): \"))\r\n#     b = int(input(\"Enter side b (1-100): \"))\r\n#     c = int(input(\"Enter side c (1-100): \"))\r\n#\r\n#     if 1 <= a <= 100 and 1 <= b <= 100 and 1 <= c <= 100:\r\n#         result = classify_triangle(a, b, c)\r\n#         print(f\"\\nResult: {result}\")\r\n#     else:\r\n#         print(\"\\n Please enter values between 1 and 100.\")\r\n# except ValueError:\r\n#     print(\"\\n Invalid input. Please enter integer values.\")\r\n#\r\n# triangle_case = [\r\n#     (1, 1, 1),\r\n#     (100, 100, 100),\r\n#     (3, 4, 5),\r\n#     (5, 12, 13),\r\n#     (6, 8, 10),\r\n#     (2, 2, 3),\r\n#     (10, 10, 19),\r\n#     (10, 10, 20),\r\n#     (5, 5, 8),\r\n#     (5, 5, 9),\r\n#     (99, 100, 1),\r\n#     (1, 100, 100)\r\n# ]\r\n#\r\n# print(\"Test Case |          a  b  c | Classification\")\r\n# print(\"------------------------------------------------\")\r\n#\r\n# for i, (a,b,c) in enumerate (triangle_case, start=1):\r\n#     result = classify_triangle(a,b,c)\r\n#     print(f\"{i:9} | {a:3}{b:3}{c:3} | {result}\")\r\n\r\n# def get_marks():\r\n#     global counter\r\n#     while True:\r\n#         try:\r\n#             mark = int(input(f\"Enter mark {counter} (1-100): \"))\r\n#             if 1 <= mark <= 100:\r\n#                 return mark\r\n#             else:\r\n#                 print(\"❌ Please enter a value between 1 and 100.\")\r\n#         except ValueError:\r\n#             print(\"❌ Invalid input. Please enter a number.\")\r\n#\r\n# counter=1\r\n# m1=get_marks()\r\n# m2=get_marks()\r\n# m3=get_marks()\r\n#\r\n# avg = int(m1+m2+m3) / 3\r\n#\r\n# if avg >= 75:\r\n#     print(\"First Division with distinction\")\r\n# elif avg >= 60:\r\n#     print(\"First div\")\r\n# elif avg >= 50:\r\n#     print(\"Seoncd div\")\r\n# elif avg >= 40:\r\n#     print(\"third\")\r\n# else:\r\n#     print(\"fail\")\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SoftwareAutomationKyle/practice.py b/SoftwareAutomationKyle/practice.py
+--- a/SoftwareAutomationKyle/practice.py	(revision f4716f71aea0a330c050fbab2a63043d5e3b1275)
++++ b/SoftwareAutomationKyle/practice.py	(date 1749857905994)
+@@ -155,3 +155,37 @@
+ # else:
+ #     print("fail")
+ 
++
++# set1 = {10,20,30,40}
++# set2 = {50, 20, "10", 60}
++# set3 = set1.union(set2)
++# print(set3)
++
++# sampleSet = {"Yellow", "Orange", "Black"}
++# sampleSet.add("Blue")
++# sampleSet.add("Orange")
++# print(sampleSet)
++
++# sampleDict = dict([
++# ('first', 1),
++# ('second', 2),
++# ('third', 3)
++# ])
++# print(sampleDict)
++
++# import unittest
++#
++#
++# class TestSum(unittest.TestCase):
++#
++#     def test_sum(self):
++#         self.assertEqual(sum([1, 2, 3]), 6, "Should be 6")
++#
++#     def test_sum_tuple(self):
++#         self.assertEqual(sum((1, 2, 2)), 6, "Should be 6")
++#
++# if __name__ == '__main__':
++#     unittest.main()
++
++aTuple = (10, 20, 30, 40, 50, 60, 70, 80)
++print(aTuple[2:5], aTuple[:4], aTuple[3:])
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (PyCharmMiscProject)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision f4716f71aea0a330c050fbab2a63043d5e3b1275)
++++ b/.idea/misc.xml	(date 1750087842230)
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12 (PyCharmMiscProject)" />
++  </component>
+   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (PyCharmMiscProject)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: SoftwareAutomationKyle/ICE3KyleA/app/minimum.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Region function\r\nclass find_minimum(object):\r\n\r\n    def find_minimum(self, user_input):\r\n        \"\"\"Takes a space seperated string of numbers, returns the smallest value\"\"\"\r\n        valid_numbers = []\r\n\r\n        if not user_input:\r\n            raise ValueError(\"No valid numbers entered. \")\r\n\r\n        smallest = user_input[0]\r\n        for num in user_input[1:]:\r\n            if  type(num) == int :\r\n                if num < smallest:\r\n                    smallest = num\r\n            else:\r\n                raise ValueError(\"Smallest number invalid \")\r\n        return smallest\r\n\r\n\r\nif __name__ == '__main__':\r\n    min = find_minimum()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py b/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py
+--- a/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py	(revision f4716f71aea0a330c050fbab2a63043d5e3b1275)
++++ b/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py	(date 1750087842167)
+@@ -1,14 +1,17 @@
+ # Region function
+ class find_minimum(object):
+-
++    #region function
+     def find_minimum(self, user_input):
+         """Takes a space seperated string of numbers, returns the smallest value"""
+         valid_numbers = []
+ 
++        #empty number list
+         if not user_input:
+             raise ValueError("No valid numbers entered. ")
+ 
++        #Intializing variable
+         smallest = user_input[0]
++        #Iterates through this for loop and prints if smallest number invalid
+         for num in user_input[1:]:
+             if  type(num) == int :
+                 if num < smallest:
+@@ -16,7 +19,7 @@
+             else:
+                 raise ValueError("Smallest number invalid ")
+         return smallest
+-
++    #endregion function
+ 
+ if __name__ == '__main__':
+     min = find_minimum()
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"27e12f74-543a-4ace-b14f-719934bdef7d\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/INFT1207Labs.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/INFT1207Labs.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Lab2_Mathuran_Kyle/books.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Lab2_Mathuran_Kyle/books.csv\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;KyleKyleA&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/KyleKyleA/INFT1207Labs.git&quot;,\r\n    &quot;accountId&quot;: &quot;e897722d-c54d-40b0-90b8-3d1d532a5872&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2xhMH694VEODYCQuziGRbrZCKob\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;Python.Lab1_Kyle_Mathuran.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.Lab2_Kyle_Mathuran.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-348a24fa61fa-5312c7369657-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.23774.444\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"27e12f74-543a-4ace-b14f-719934bdef7d\" name=\"Changes\" comment=\"\" />\r\n      <created>1748385761453</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1748385761453</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/Lab2_Mathuran_Kyle/Lab2_Kyle_Mathuran.py</url>\r\n          <line>40</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/Lab2_Mathuran_Kyle/Lab2_Kyle_Mathuran.py</url>\r\n          <line>64</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f4716f71aea0a330c050fbab2a63043d5e3b1275)
++++ b/.idea/workspace.xml	(date 1750361914591)
+@@ -5,10 +5,11 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="27e12f74-543a-4ace-b14f-719934bdef7d" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/INFT1207Labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/INFT1207Labs.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Lab2_Mathuran_Kyle/books.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2_Mathuran_Kyle/books.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SoftwareAutomationKyle/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareAutomationKyle/practice.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
