@@ -43,6 +43,7 @@ class TestArea(unittest.TestCase):
     def test_circle_area_ValidInputs(self):
         """Verify circle_area returns correct results for valid numeric inputs"""
         self.assertEqual(circle_area(3), pi*(3**2))
+        self.assertEqual(circle_area(2.9), pi*(2.9**2))
         self.assertEqual(circle_area(1), pi)
 
     # TRAPEZIUM TEST CASES
@@ -62,7 +63,7 @@ class TestArea(unittest.TestCase):
         """Verify trapezium_area returns correct results for valid numeric inputs"""
         self.assertEqual(trapezium_area(4, 6, 6), 0.5*(4+6)*6)
         self.assertEqual(trapezium_area(1, 1, 1), 1)
-        self.assertEqual(trapezium_area(10, 20, 5), 0.5*(10+20)*5)
+        self.assertEqual(trapezium_area(10.1, 20.5, 5.9), 0.5*(10.1+20.5)*5.9)
 
     # ELLIPSE TEST CASES
     def test_ellipse_area_TypeError(self):
@@ -85,6 +86,7 @@ class TestArea(unittest.TestCase):
     def test_ellipse_area_ValidInputs(self):
         """Verify ellipse_area returns correct results for valid numeric inputs"""
         self.assertEqual(ellipse_area(3, 4), pi*3*4)
+        self.assertEqual(ellipse_area(3.2, 2.9), pi * 3.2 * 2.9)
         self.assertEqual(ellipse_area(1, 1), pi)
 
     # RHOMBUS TEST CASES

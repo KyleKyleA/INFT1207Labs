@@ -67,5 +67,5 @@ def rhombus_area(base, height):
     if base <= 0 or height <= 0:
         raise ValueError ("Both base and height must be positive")
 
-    return (base*height)
+    return base*height
 #endregion FUNCTIONS
