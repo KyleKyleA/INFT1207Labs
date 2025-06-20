@@ -7,7 +7,7 @@ Description: Test suite that runs test cases from 'test_area_fixtures'
 
 #region IMPORTS
 import unittest
-from Lab3_Mathuran_Kyle.test.test_Lab3_Mathuran_Kyle import TestArea
+from test.test_Lab3_Mathuran_Kyle import TestArea
 #endregion IMPORTS
 
 #region CONSTANTS
