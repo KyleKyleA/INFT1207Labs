@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27e12f74-543a-4ace-b14f-719934bdef7d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/INFT1207Labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/INFT1207Labs.iml" afterDir="false" />
+    <list default="true" id="27e12f74-543a-4ace-b14f-719934bdef7d" name="Changes" comment="finished adding suit.addTest etc for trap and rhombus along with finishing adding value, type error, and equals to fixture program">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2_Mathuran_Kyle/books.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2_Mathuran_Kyle/books.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/.idea/Lab3_Mathuran_Kyle.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3_Mathuran_Kyle/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareAutomationKyle/ICE3KyleA/app/minimum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoftwareAutomationKyle/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareAutomationKyle/practice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +37,9 @@
     &quot;accountId&quot;: &quot;e897722d-c54d-40b0-90b8-3d1d532a5872&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -42,14 +52,86 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests in test_Lab3_Mathuran_Kyle.py.executor&quot;: &quot;Run&quot;,
     &quot;Python.Lab1_Kyle_Mathuran.executor&quot;: &quot;Run&quot;,
     &quot;Python.Lab2_Kyle_Mathuran.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Lab3_Mathuran_Kyle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_suite_Lab3_Mathuran_Kyle.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RunManager" selected="Python tests.Python tests in test_Lab3_Mathuran_Kyle.py">
+    <configuration name="Lab3_Mathuran_Kyle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="INFT1207Labs" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab3_Mathuran_Kyle/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab3_Mathuran_Kyle/app/Lab3_Mathuran_Kyle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_suite_Lab3_Mathuran_Kyle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="INFT1207Labs" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab3_Mathuran_Kyle/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab3_Mathuran_Kyle/test/test_suite_Lab3_Mathuran_Kyle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_Lab3_Mathuran_Kyle.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="INFT1207Labs" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab3_Mathuran_Kyle/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Lab3_Mathuran_Kyle/test/test_Lab3_Mathuran_Kyle.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_Lab3_Mathuran_Kyle.py" />
+        <item itemvalue="Python.test_suite_Lab3_Mathuran_Kyle" />
+        <item itemvalue="Python.Lab3_Mathuran_Kyle" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,7 +147,28 @@
       <option name="presentableId" value="Default" />
       <updated>1748385761453</updated>
     </task>
+    <task id="LOCAL-00001" summary="finished adding suit.addTest etc for trap and rhombus along with finishing adding value, type error, and equals to fixture program">
+      <option name="closed" value="true" />
+      <created>1750367169538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750367169538</updated>
+    </task>
+    <task id="LOCAL-00002" summary="finished adding suit.addTest etc for trap and rhombus along with finishing adding value, type error, and equals to fixture program">
+      <option name="closed" value="true" />
+      <created>1750434662805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750434662805</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finished adding suit.addTest etc for trap and rhombus along with finishing adding value, type error, and equals to fixture program" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished adding suit.addTest etc for trap and rhombus along with finishing adding value, type error, and equals to fixture program" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -79,6 +182,11 @@
           <url>file://$PROJECT_DIR$/Lab2_Mathuran_Kyle/Lab2_Kyle_Mathuran.py</url>
           <line>64</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SoftwareAutomationKyle/ICE3KyleA/test/test_minimum.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
