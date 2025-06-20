@@ -38,9 +38,9 @@ def test_suite(shape: str):
 
     #Trape
     elif shape == 2:
-        suite.addTest(TestArea('test_trapezium__area_TypeError'))
+        suite.addTest(TestArea('test_trapezium_area_TypeError'))
         suite.addTest(TestArea('test_trapezium_area_ValueError'))
-        suite.addTest(TestArea('test_trapezium_area_ValidInput'))
+        suite.addTest(TestArea('test_trapezium_area_ValidInputs'))
 
     elif shape == 3:
         suite.addTest(TestArea('test_ellipse_area_TypeError'))
@@ -49,7 +49,7 @@ def test_suite(shape: str):
 
     elif shape == 4:
         suite.addTest(TestArea('test_rhombus_area_TypeError'))
-        suite.addTest(TestArea('test_trapezium_area_ValueError'))
+        suite.addTest(TestArea('test_rhombus_area_ValueError'))
         suite.addTest(TestArea('test_rhombus_area_ValidInputs'))
 
     print(runner.run(suite))
