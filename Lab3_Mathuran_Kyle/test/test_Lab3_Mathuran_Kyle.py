@@ -102,10 +102,10 @@ class TestArea(unittest.TestCase):
 
     def test_rhombus_area_ValidInputs(self):
         """Verify rhombus_area returns correct results for valid numeric inputs"""
-        self.assertEqual(rhombus_area(10, 8), 40)
-        self.assertEqual(rhombus_area(2, 4), 4)
-        self.assertEqual(rhombus_area(5.5, 3.2), 8.8)
-        self.assertEqual(rhombus_area(7, 2.5), 8.75)
+        self.assertEqual(rhombus_area(10, 8), 80)
+        self.assertEqual(rhombus_area(2, 4), 8)
+        self.assertEqual(rhombus_area(5.5, 3.2), 17.6)
+        self.assertEqual(rhombus_area(7, 2.5), 17.5)
 
 #endregion TESTING CLASS
 

@@ -55,17 +55,17 @@ def ellipse_area(major_axis, minor_axis):
 
     return pi*major_axis*minor_axis
 
-def rhombus_area(first_diagonal, second_diagonal):
+def rhombus_area(base, height):
     """Calculates the area of the rhombus given two diagonal input """
     # checks for numeric input
-    if type (first_diagonal) not in [int, float]:
-        raise TypeError("The first diagonal must be int or float")
-    if type(second_diagonal) not in [int, float]:
-        raise TypeError("The second diagonal must be int or float")
+    if type (base) not in [int, float]:
+        raise TypeError("The base must be int or float")
+    if type(height) not in [int, float]:
+        raise TypeError("The height must be int or float")
 
     # checks if numeric input is whether int or float
-    if first_diagonal <= 0 or second_diagonal <= 0:
-        raise ValueError ("Both diagonals must be positive")
+    if base <= 0 or height <= 0:
+        raise ValueError ("Both base and height must be positive")
 
-    return (first_diagonal*second_diagonal)/2
+    return (base*height)
 #endregion FUNCTIONS
