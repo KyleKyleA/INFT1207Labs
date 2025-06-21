@@ -27,26 +27,30 @@ PROMPT = "Choose shape: "
 #region FUNCTIONS
 #region unittest
 def test_suite(shape: str):
+    """Runs test suite for chosen shape's area calculations"""
     # create instances of unittest
     suite = unittest.TestSuite()
     runner = unittest.TextTestRunner()
 
+    # circle
     if shape == 1:
         suite.addTest(TestArea('test_circle_area_TypeError'))
         suite.addTest(TestArea('test_circle_area_ValueError'))
         suite.addTest(TestArea('test_circle_area_ValidInputs'))
 
-    #Trape
+    # trapezium
     elif shape == 2:
         suite.addTest(TestArea('test_trapezium_area_TypeError'))
         suite.addTest(TestArea('test_trapezium_area_ValueError'))
         suite.addTest(TestArea('test_trapezium_area_ValidInputs'))
 
+    # ellipse
     elif shape == 3:
         suite.addTest(TestArea('test_ellipse_area_TypeError'))
         suite.addTest(TestArea('test_ellipse_area_ValueError'))
         suite.addTest(TestArea('test_ellipse_area_ValidInputs'))
 
+    # rhombus
     elif shape == 4:
         suite.addTest(TestArea('test_rhombus_area_TypeError'))
         suite.addTest(TestArea('test_rhombus_area_ValueError'))
@@ -57,22 +61,22 @@ def test_suite(shape: str):
 
 #region helpers
 def validate_int_range(prompt: str, valid_int: list [int]):
-    """Prompts user for integer input and checks if it's within the specified range"""
+    """Prompts user for integer input and checks if it's within the specified options"""
     while True:
         try:
             # prompt user for input
             int_input = int(input(prompt))
 
-            # checks if number is within specified range
+            # checks if number is within specified options
             if int_input not in valid_int:
-                raise Exception(f"Number input must be within specified range: {valid_int}!")
+                raise Exception(f"Number input must be within specified options: {valid_int}!")
 
             return int_input
         except ValueError as v:
-            print(f"{v}. Only integer values are accepted!")
+            print(f"ERROR: {v}. Only integer values are accepted!")
             continue
         except Exception as e:
-            print(e)
+            print(f"ERROR: {e}")
             continue
 
 #endregion helpers

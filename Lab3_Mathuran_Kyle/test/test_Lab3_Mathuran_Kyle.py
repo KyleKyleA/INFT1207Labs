@@ -14,21 +14,26 @@ from math import pi
 
 #region TESTING CLASS
 class TestArea(unittest.TestCase):
+    """Test suite for 'calculate_area' functions"""
     @classmethod
     def setUpClass(cls):
+        """Class setup - runs before all tests"""
         print("Setting up test class")
 
     def setUp(self):
+        """Test setup - runs before each test"""
         print("Setting up test")
 
     @classmethod
     def tearDownClass(cls):
+        """Class teardown - runs after all tests"""
         print("Tearing down the test class")
 
     def tearDown(self):
+        """Test teardown - runs after each test"""
         print("End of test")
 
-    # CIRCLE TEST CASES
+    #region CIRCLE TEST CASES
     def test_circle_area_TypeError(self):
         """Verify circle_area raises TypeError for invalid inputs"""
         self.assertRaises(TypeError, circle_area, 2+9j)
@@ -45,8 +50,9 @@ class TestArea(unittest.TestCase):
         self.assertEqual(circle_area(3), pi*(3**2))
         self.assertEqual(circle_area(2.9), pi*(2.9**2))
         self.assertEqual(circle_area(1), pi)
+    #endregion CIRCLE TEST CASES
 
-    # TRAPEZIUM TEST CASES
+    #region TRAPEZIUM TEST CASES
     def test_trapezium_area_TypeError(self):
         """Verify trapezium_area raises TypeError for invalid inputs"""
         self.assertRaises(TypeError, trapezium_area, "five", 6, 5)
@@ -64,8 +70,9 @@ class TestArea(unittest.TestCase):
         self.assertEqual(trapezium_area(4, 6, 6), 0.5*(4+6)*6)
         self.assertEqual(trapezium_area(1, 1, 1), 1)
         self.assertEqual(trapezium_area(10.1, 20.5, 5.9), 0.5*(10.1+20.5)*5.9)
+    #endregion TRAPEZIUM TEST CASES
 
-    # ELLIPSE TEST CASES
+    #region ELLIPSE TEST CASES
     def test_ellipse_area_TypeError(self):
         """Verify ellipse_area raises TypeError for invalid inputs"""
         self.assertRaises(TypeError, ellipse_area, 2+9j, 1)
@@ -88,8 +95,9 @@ class TestArea(unittest.TestCase):
         self.assertEqual(ellipse_area(3, 4), pi*3*4)
         self.assertEqual(ellipse_area(3.2, 2.9), pi * 3.2 * 2.9)
         self.assertEqual(ellipse_area(1, 1), pi)
+    #endregion ELLIPSE TEST CASES
 
-    # RHOMBUS TEST CASES
+    #region RHOMBUS TEST CASES
     def test_rhombus_area_TypeError(self):
         """Verify rhombus_area raises TypeError for invalid inputs"""
         self.assertRaises(TypeError, rhombus_area, "10", 5 )
@@ -108,6 +116,7 @@ class TestArea(unittest.TestCase):
         self.assertEqual(rhombus_area(2, 4), 8)
         self.assertEqual(rhombus_area(5.5, 3.2), 17.6)
         self.assertEqual(rhombus_area(7, 2.5), 17.5)
+    #endregion RHOMBUS TEST CASES
 
 #endregion TESTING CLASS
 
