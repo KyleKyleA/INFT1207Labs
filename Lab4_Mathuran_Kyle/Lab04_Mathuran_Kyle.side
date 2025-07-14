@@ -14,7 +14,7 @@
       "id": "f8babf72-4cff-45e3-818f-71b3b6a03dd6",
       "comment": "",
       "command": "open",
-      "target": "https://www.calculator.net/body-fat-calculator.html",
+      "target": "https://www.calculator.net/body-fat-calculator.html?ctype=metric&csex=f&cage=40&cweightlbs=152&cheightfeet=5&cheightinch=10.5&cneckfeet=1&cneckinch=7.5&cwaistfeet=3&cwaistinch=1.5&chipfeet=2&chipinch=10.5&cweightkgs=100&cheightmeter=189&cneckmeter=57&cwaistmeter=98&chipmeter=100&x=Calculate",
       "targets": [],
       "value": ""
     }, {
@@ -223,7 +223,7 @@
       "id": "8b4d2dbe-aa23-4de3-a576-40c36250cbea",
       "comment": "",
       "command": "open",
-      "target": "https://www.calculator.net/body-fat-calculator.html",
+      "target": "https://www.calculator.net/body-fat-calculator.html?ctype=metric&csex=f&cage=40&cweightlbs=152&cheightfeet=5&cheightinch=10.5&cneckfeet=1&cneckinch=7.5&cwaistfeet=3&cwaistinch=1.5&chipfeet=2&chipinch=10.5&cweightkgs=100&cheightmeter=189&cneckmeter=57&cwaistmeter=98&chipmeter=100&x=Calculate",
       "targets": [],
       "value": ""
     }, {
