@@ -2,7 +2,7 @@
   "id": "141cac13-6c50-4dd1-8d24-e3471b23b19a",
   "version": "2.0",
   "name": "Lab04_Mathuran_Kyle",
-  "url": "https://www.calculator.net/body-fat-calculator.html",
+  "url": "https://www.calculator.net/body-fat-calculator.html?ctype=metric&csex=f&cage=40&cweightlbs=152&cheightfeet=5&cheightinch=10.5&cneckfeet=1&cneckinch=7.5&cwaistfeet=3&cwaistinch=1.5&chipfeet=2&chipinch=10.5&cweightkgs=100&cheightmeter=189&cneckmeter=57&cwaistmeter=98&chipmeter=100&x=Calculate",
   "tests": [{
     "id": "33021058-32d9-46bc-997f-fb645b4056b5",
     "name": "",
@@ -462,6 +462,6 @@
     "timeout": 300,
     "tests": ["32a36e8a-3836-4ed1-953f-8dbfe45eee3c", "fc73910e-83f9-412c-9d4e-e849e10b9c71"]
   }],
-  "urls": ["https://www.calculator.net/body-fat-calculator.html"],
+  "urls": ["https://www.calculator.net/body-fat-calculator.html", "https://www.calculator.net/body-fat-calculator.html?ctype=metric&csex=f&cage=40&cweightlbs=152&cheightfeet=5&cheightinch=10.5&cneckfeet=1&cneckinch=7.5&cwaistfeet=3&cwaistinch=1.5&chipfeet=2&chipinch=10.5&cweightkgs=100&cheightmeter=189&cneckmeter=57&cwaistmeter=98&chipmeter=100&x=Calculate"],
   "plugins": []
 }
