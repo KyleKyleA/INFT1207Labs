@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bce7fe69-fc42-4f50-90bc-cd728e58dfc5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_Lab3_Mathuran_Kyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_Lab3_Mathuran_Kyle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_suite_Lab3_Mathuran_Kyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_suite_Lab3_Mathuran_Kyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_femaleTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test_femaleTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +36,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests in test_Lab3_Mathuran_Kyle.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_suite_Lab3_Mathuran_Kyle.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kyle/OneDrive/Documents/GitHub/INFT1207Labs/Lab3_Mathuran_Kyle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests in test_Lab3_Mathuran_Kyle.py.executor": "Run",
+    "Python.test_defaultSuite.executor": "Run",
+    "Python.test_femaleTest.executor": "Run",
+    "Python.test_suite_Lab3_Mathuran_Kyle.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Kyle/OneDrive/Documents/GitHub/INFT1207Labs/Lab3_Mathuran_Kyle"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Python.test_defaultSuite">
+    <configuration name="test_defaultSuite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab3_Mathuran_Kyle" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../../../Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../../../../Desktop/test_defaultSuite.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_femaleTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab3_Mathuran_Kyle" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test_femaleTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_suite_Lab3_Mathuran_Kyle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lab3_Mathuran_Kyle" />
       <option name="ENV_FILES" value="" />
@@ -73,6 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_defaultSuite" />
+        <item itemvalue="Python.test_femaleTest" />
         <item itemvalue="Python.test_suite_Lab3_Mathuran_Kyle" />
       </list>
     </recent_temporary>
