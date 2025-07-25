@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8123e9a-d87b-4fa6-8c6c-19d3925cad4c" name="Changes" comment="Fixing">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ICE3KyleA/app/minimum.py" beforeDir="false" afterPath="$PROJECT_DIR$/ICE3KyleA/app/minimum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4_Mathuran_Kyle/.idea/Lab4_Mathuran_Kyle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4_Mathuran_Kyle/.idea/Lab4_Mathuran_Kyle.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4_Mathuran_Kyle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab4_Mathuran_Kyle/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
