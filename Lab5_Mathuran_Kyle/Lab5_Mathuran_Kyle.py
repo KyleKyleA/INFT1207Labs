@@ -12,20 +12,22 @@ import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
 #EndRegion imports
 
 
-class TestFinalRecording():
-    def setup_method(self, method):
-        self.driver = webdriver.Chrome()
+class TestFinalRecording(object):
+    def setup_method(self):
+        self.driver = webdriver.Edge()
         self.vars = {}
 
-        def teardown_method(self, method):
-            self.driver.quit()
+    def teardown_method(self):
+        self.driver.quit()
 
     def test_finalRecording(self):
         self.driver.get("https://magento.softwaretestingboard.com/")
@@ -35,26 +37,26 @@ class TestFinalRecording():
         actions.move_to_element(element).perform()
         element = self.driver.find_element(By.CSS_SELECTOR, "body")
         actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
+        actions.move_to_element(element).perform()
         element = self.driver.find_element(By.CSS_SELECTOR, "#ui-id-4 > span:nth-child(2)")
         actions = ActionChains(self.driver)
         actions.move_to_element(element).perform()
         self.driver.find_element(By.CSS_SELECTOR, "#ui-id-4 > span:nth-child(2)").click()
         element = self.driver.find_element(By.CSS_SELECTOR, "body")
         actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
+        actions.move_to_element(element).perform()
         element = self.driver.find_element(By.ID, "ui-id-4")
         actions = ActionChains(self.driver)
         actions.move_to_element(element).perform()
         element = self.driver.find_element(By.CSS_SELECTOR, "body")
         actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
+        actions.move_to_element(element).perform()
         element = self.driver.find_element(By.ID, "ui-id-4")
         actions = ActionChains(self.driver)
         actions.move_to_element(element).perform()
         element = self.driver.find_element(By.CSS_SELECTOR, "body")
         actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
+        actions.move_to_element(element).perform()
         self.driver.find_element(By.CSS_SELECTOR, "#ui-id-12 > span").click()
         element = self.driver.find_element(By.ID, "mode-list")
         actions = ActionChains(self.driver)
@@ -73,7 +75,7 @@ class TestFinalRecording():
         self.driver.find_element(By.CSS_SELECTOR, ".product > .product-image-container .product-image-photo").click()
         element = self.driver.find_element(By.CSS_SELECTOR, "body")
         actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
+        actions.move_to_element(element).perform()
         self.driver.switch_to.frame(8)
         self.driver.switch_to.frame(0)
         self.driver.execute_script("window.scrollTo(0,64)")
