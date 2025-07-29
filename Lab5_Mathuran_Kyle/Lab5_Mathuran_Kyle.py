@@ -1,117 +1,109 @@
 """
-Name:
-Course:
+Name: Mathuran Chandramohan, Kyles Angeles
+Course: INFT 1207
 Date: July 25th, 2025
 Description: Set of test cases for this link https://magento.softwaretestingboard.com/
 """
 
-# regionImports
-import pytest
-import time
-import json
+#region IMPORTS
+import unittest
+from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+#endregion IMPORTS
 
-#EndRegion imports
+#region TEST SUITE
+class TestFinalRecording(unittest.TestCase):
+    # ********** CLASS METHODS ********** #
+    @classmethod
+    def setUpClass(cls):
+        """Class setup - runs before all tests"""
+        cls.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        cls.driver.maximize_window()
 
+    @classmethod
+    def tearDownClass(cls):
+        """Class teardown - runs after all tests"""
+        cls.driver.quit()
 
-class TestFinalRecording(object):
-    def setup_method(self):
-        self.driver = webdriver.Edge()
-        self.vars = {}
-
-    def teardown_method(self):
-        self.driver.quit()
-
-    def test_finalRecording(self):
+    # ********** TEST CASES ********** #
+    def test_selectArticleOfClothing(self):
+        """Test navigation to 'Women's Hoodie and Sweatshirts' page"""
+        # open website
         self.driver.get("https://magento.softwaretestingboard.com/")
-        self.driver.set_window_size(974, 1080)
+        sleep(1)
+
+        # hover on 'Women'
         element = self.driver.find_element(By.LINK_TEXT, "Women")
         actions = ActionChains(self.driver)
         actions.move_to_element(element).perform()
-        element = self.driver.find_element(By.CSS_SELECTOR, "body")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
-        element = self.driver.find_element(By.CSS_SELECTOR, "#ui-id-4 > span:nth-child(2)")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
-        self.driver.find_element(By.CSS_SELECTOR, "#ui-id-4 > span:nth-child(2)").click()
-        element = self.driver.find_element(By.CSS_SELECTOR, "body")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
-        element = self.driver.find_element(By.ID, "ui-id-4")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
-        element = self.driver.find_element(By.CSS_SELECTOR, "body")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
-        element = self.driver.find_element(By.ID, "ui-id-4")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
-        element = self.driver.find_element(By.CSS_SELECTOR, "body")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
-        self.driver.find_element(By.CSS_SELECTOR, "#ui-id-12 > span").click()
-        element = self.driver.find_element(By.ID, "mode-list")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(1) > .filter-options-title").click()
-        self.driver.execute_script("window.scrollTo(0,120)")
-        self.driver.find_element(By.CSS_SELECTOR, ".allow .item:nth-child(1) > a").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(1) > .filter-options-title").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".swatch-option-link-layered:nth-child(3) > .text").click()
-        self.driver.execute_script("window.scrollTo(0,85)")
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(2) > .filter-options-title").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".swatch-option-link-layered:nth-child(3) > .swatch-option").click()
-        self.driver.execute_script("window.scrollTo(0,84)")
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(4) > .filter-options-title").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".active .item:nth-child(2) > a").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".product > .product-image-container .product-image-photo").click()
-        element = self.driver.find_element(By.CSS_SELECTOR, "body")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
-        self.driver.switch_to.frame(8)
-        self.driver.switch_to.frame(0)
-        self.driver.execute_script("window.scrollTo(0,64)")
-        assert (self.vars["css=#product-addtocart-button > span"] == "hoodie")
-        self.driver.switch_to.default_content()
-        self.driver.switch_to.default_content()
-        self.driver.find_element(By.LINK_TEXT, "Hoodies & Sweatshirts").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(1) > .filter-options-title").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".allow .item:nth-child(2) > a").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(1) > .filter-options-title").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".swatch-option-link-layered:nth-child(2) > .text").click()
-        self.driver.execute_script("window.scrollTo(0,136)")
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(2) > .filter-options-title").click()
-        self.driver.find_element(By.CSS_SELECTOR, ".swatch-option-link-layered:nth-child(4) > .swatch-option").click()
-        self.driver.execute_script("window.scrollTo(0,230)")
-        self.driver.find_element(By.CSS_SELECTOR, ".filter-options-item:nth-child(4) > .filter-options-title").click()
-        element = self.driver.find_element(By.CSS_SELECTOR, ".active .item:nth-child(4) > a")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
-        self.driver.find_element(By.CSS_SELECTOR, ".active .item:nth-child(4) > a").click()
-        element = self.driver.find_element(By.CSS_SELECTOR,
-                                           ".item:nth-child(1) > .product-item-info .product-image-photo")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
-        self.driver.find_element(By.CSS_SELECTOR,
-                                 ".item:nth-child(1) > .product-item-info .product-image-photo").click()
-        element = self.driver.find_element(By.CSS_SELECTOR, ".fotorama__img")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
-        element = self.driver.find_element(By.CSS_SELECTOR, "body")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element, 0, 0).perform()
-        self.driver.find_element(By.ID, "option-label-size-143-item-167").click()
-        self.driver.find_element(By.ID, "option-label-color-93-item-56").click()
-        element = self.driver.find_element(By.CSS_SELECTOR, "#product-addtocart-button > span")
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
+        sleep(1)
 
-# EndRegion TEST SUITE
+        # hover on 'Tops'
+        element = self.driver.find_element(By.LINK_TEXT, "Tops")
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element).perform()
+        sleep(1)
+
+        # click on 'Hoodies & Sweatshirts'
+        element = self.driver.find_element(By.LINK_TEXT, "Hoodies & Sweatshirts")
+        element.click()
+        sleep(1)
+
+    def test_customizeArticleOfClothing(self):
+        """Test and assert customization and selection of an article of clothing"""
+        # open website
+        self.driver.get("https://magento.softwaretestingboard.com/women/tops-women/hoodies-and-sweatshirts-women.html")
+        sleep(1)
+
+        # click on 'Style' and select 'Full Zip'
+        self.driver.find_element(By.XPATH, "//div[normalize-space()='Style']").click()
+        sleep(1)
+        self.driver.find_element(By.XPATH, "//div[@id='narrow-by-list']//div[1]//div[2]//ol[1]//li[1]//a[1]").click()
+        sleep(1)
+
+        # return to default content when ad pops up
+        if "#google_vignette" in self.driver.current_url:
+            self.driver.get("https://magento.softwaretestingboard.com/women/tops-women/hoodies-and-sweatshirts-women.html?style_general=128")
+
+        # click on 'Color' and select 'Gray'
+        self.driver.find_element(By.XPATH, "//div[normalize-space()='Color']").click()
+        sleep(1)
+        self.driver.find_element(By.XPATH, "//a[@aria-label='Gray']//div[contains(@class,'swatch-option color')]").click()
+        sleep(1)
+
+        # click on 'Size' and select 'M'
+        self.driver.find_element(By.XPATH, "//div[normalize-space()='Size']").click()
+        sleep(1)
+        self.driver.find_element(By.XPATH, "//a[@aria-label='M']//div[contains(@class,'swatch-option text')][normalize-space()='M']").click()
+        sleep(1)
+
+        # hover on 'Circe Hooded Ice Fleece'
+        element = self.driver.find_element(By.XPATH, "//img[@alt='Circe Hooded Ice Fleece-M-Gray']")
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element).perform()
+        sleep(1)
+
+        # click 'Add to Cart'
+        self.driver.find_element(By.XPATH, '// *[ @ id = "maincontent"] / div[3] / div[1] / div[3] / ol / li[1] / div / div / div[3] / div / div[1] / form / button').click()
+        sleep(5)
+
+        # click on shopping cart icon
+        self.driver.find_element(By.XPATH, "//a[@class='action showcart']").click()
+        sleep(1)
+
+        # click on 'Proceed to Checkout' button
+        self.driver.find_element(By.XPATH, "//button[@id='top-cart-btn-checkout']").click()
+        sleep(1)
+
+        # collapse order summary
+        self.driver.find_element(By.XPATH, "//div[@class='title']").click()
+        sleep(1)
+
+        # assert successful order
+        target = self.driver.find_element(By.CLASS_NAME, "product-item-name")
+        self.assertEqual("Circe Hooded Ice Fleece", target.text)
+#endregion TEST SUITE
